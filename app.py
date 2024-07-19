@@ -20,9 +20,9 @@ def load_plotly_figures(folder_path):
         with open(os.path.join(folder_path, html_file), "r", encoding="utf-8") as f:
             html_contents[html_file] = f.read()
     return html_contents
+    
 
 def set_bg_hack_url():
-
     st.markdown(
         f"""
         <style>
@@ -53,6 +53,7 @@ def set_bg_hack_url():
         """,
         unsafe_allow_html=True
     )
+
 
 # Modify the predict_sleep_disorder function to accept a list of features
 def predict_sleep_disorder(features):
